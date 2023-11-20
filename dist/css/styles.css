@@ -1,0 +1,1197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mobile-overflow {
+  overflow: hidden;
+}
+
+html,
+body {
+  font-family: "LatoReg", sans-serif;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: "CaveatB";
+  src: url(../css/fonts/Caveat-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "CaveatR";
+  src: url(../css/fonts/Caveat-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "LatoItal";
+  src: url(../css/fonts/Lato/Lato-Italic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "LatoLightItal";
+  src: url(../css/fonts/Lato/Lato-LightItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "LatoBlack";
+  src: url(../css/fonts/Lato/Lato-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: "LatoReg";
+  src: url(../css/fonts/Lato/Lato-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "LatoL";
+  src: url(../css/fonts/Lato/Lato-Light.ttf) format("truetype");
+}
+.nav-holder {
+  height: 70px;
+  width: 100%;
+  margin-top: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.nav-holder a {
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+  font-family: "CaveatR", sans-serif;
+  z-index: 50;
+  transition: ease 0.07s;
+}
+.nav-holder .nav-links {
+  transition: ease 0.07s;
+}
+.nav-holder .nav-links:focus {
+  border-bottom: 3px solid #000;
+}
+.nav-holder .nav-links:hover {
+  border-bottom: 3px solid #000;
+}
+.nav-holder .nav-links:active {
+  border-bottom: 3px solid #000;
+}
+.nav-holder .logo {
+  cursor: pointer;
+  margin-left: 50px;
+  margin-top: 10px;
+  z-index: 50;
+}
+.nav-holder .logo a svg {
+  width: 167px;
+  height: 55px;
+}
+.nav-holder .login {
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd972;
+  font-size: 25px;
+  padding: 10px 52px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.nav-holder .login:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+.nav-holder nav {
+  margin-right: 50px;
+  z-index: 50;
+}
+.nav-holder ul {
+  display: flex;
+  list-style-type: none;
+  transition: ease 1s;
+}
+.nav-holder ul li {
+  margin-left: 41px;
+}
+.nav-holder .hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+  transition: ease 0.3s;
+  z-index: 50;
+}
+.nav-holder .hamburger-icon div {
+  background-color: #000;
+  width: 34px;
+  height: 3px;
+  margin: 8px 0;
+  transition: ease 0.3s;
+}
+.nav-holder .open .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.nav-holder .open .bar2 {
+  opacity: 0;
+}
+.nav-holder .open .bar3 {
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+.nav-holder .open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slide-down 0.25s ease-in-out;
+}
+@keyframes slide-down {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.nav-holder .mobile-menu {
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  height: calc(100vh - 120px);
+  width: 100%;
+  background-color: #eeeeee;
+  transition: ease 0.3s;
+  z-index: 9999;
+  justify-content: space-evenly;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .nav-holder nav {
+    display: none;
+  }
+  .nav-holder ul li {
+    margin-left: 0;
+  }
+  .nav-holder .hamburger-icon {
+    display: block;
+    margin-right: 42px;
+  }
+}
+@media (max-aspect-ratio: 9/16) {
+  .nav-holder .hamburger-icon {
+    margin-right: 42px;
+  }
+}
+.footer-holder {
+  z-index: 9;
+  position: relative;
+  font-family: "LatoItal", sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 70px;
+}
+.footer-holder p {
+  margin: auto 0 auto 40px;
+  letter-spacing: 1.5px;
+}
+.footer-holder .footer-links a {
+  margin-left: 21px;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 1.5px;
+}
+.footer-holder .footer-socials a {
+  text-decoration: none;
+}
+.footer-holder .footer-socials a svg {
+  width: 19px;
+  height: 19px;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .site-wrapper .footer-holder {
+    margin-top: 40px;
+  }
+  .site-wrapper .footer-holder p {
+    margin: auto 0 auto 21px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .site-wrapper .footer-holder .footer-links {
+    margin-right: 16px;
+  }
+  .site-wrapper .footer-holder .footer-links a {
+    margin-left: 17px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .site-wrapper .footer-holder .footer-socials a svg {
+    margin-right: 21px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .site-wrapper .footer-holder {
+    height: 80px;
+    top: -30px;
+  }
+  .site-wrapper .footer-holder p {
+    margin-top: 23px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .site-wrapper .footer-holder .footer-links {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 80%;
+    text-align: center;
+  }
+  .site-wrapper .footer-holder .footer-links a {
+    margin-left: 17px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .site-wrapper .footer-holder .footer-socials {
+    margin-bottom: 20px;
+  }
+  .site-wrapper .footer-holder .footer-socials a svg {
+    margin-right: 21px;
+  }
+}
+.content {
+  min-height: 82.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .content-box {
+  width: 700px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .content-box .circle {
+  width: 357.5px;
+  height: 357.5px;
+  border-radius: 400px;
+  background-color: #ffd972;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+}
+.content .content-box .circle h1 {
+  font-family: "CaveatB", sans-serif;
+  letter-spacing: 2.4px;
+  font-size: 24px;
+}
+.content .content-box .circle p {
+  text-align: center;
+  font-family: "LatoReg", sans-serif;
+  font-size: 13px;
+  width: 170px;
+  letter-spacing: 1.6px;
+}
+.content .content-box .circle2 {
+  position: absolute;
+  margin-left: 330px;
+  margin-bottom: 330px;
+  width: 167.88px;
+  height: 167.88px;
+  border-radius: 400px;
+  background-color: #fcbcb8;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+}
+.content .content-box .circle2 p {
+  text-align: center;
+  font-family: "LatoItal", sans-serif;
+  font-size: 10px;
+  width: 115px;
+  letter-spacing: 1.4px;
+  margin-top: 5px;
+}
+
+.home-hero {
+  background-image: linear-gradient(rgba(242, 92, 84, 0.7), rgba(242, 92, 84, 0.7)), url(../images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1280px) {
+  .content {
+    height: 630px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content .content-box .circle {
+    width: 357.5px;
+    height: 357.5px;
+  }
+  .content .content-box .circle h1 {
+    letter-spacing: 2.4px;
+    font-size: 24px;
+  }
+  .content .content-box .circle p {
+    font-size: 13px;
+    width: 170px;
+  }
+  .content .content-box .circle2 {
+    margin-left: 200px;
+    margin-bottom: 390px;
+    width: 167.88px;
+    height: 167.88px;
+    z-index: 2;
+  }
+  .content .content-box .circle2 p {
+    font-size: 10px;
+    width: 115px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .content .content-box .circle {
+    width: 257.8px;
+    height: 257.8px;
+  }
+  .content .content-box .circle h1 {
+    letter-spacing: 2.1px;
+    font-size: 17px;
+  }
+  .content .content-box .circle p {
+    font-size: 9px;
+    width: 140px;
+  }
+  .content .content-box .circle2 {
+    margin-left: 130px;
+    margin-bottom: 285px;
+    width: 121px;
+    height: 121px;
+    z-index: 2;
+  }
+  .content .content-box .circle2 p {
+    font-size: 8px;
+    width: 70px;
+    margin-top: 10px;
+  }
+}
+::-webkit-input-placeholder {
+  color: #000;
+}
+
+.account-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 82.5vh;
+  top: -66px;
+  position: relative;
+  z-index: 3;
+}
+.account-wrapper .login-wrapper h1 {
+  font-family: "LatoBlack", sans-serif;
+  font-weight: 200;
+  font-size: 30px;
+}
+.account-wrapper .login-wrapper p {
+  margin-bottom: -4px;
+  font-family: "LatoItal", sans-serif;
+  font-size: 12px;
+}
+.account-wrapper .signupForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-top: 43px;
+}
+.account-wrapper .signupForm .login-input {
+  height: 22px;
+  width: 206px;
+  border: 0;
+  border-bottom: 3px solid #000;
+  color: #000;
+  font-size: 12px;
+  font-family: "LatoReg", sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+}
+.account-wrapper .signupForm .login-input:focus {
+  outline: none;
+}
+.account-wrapper .signupForm .signup-input {
+  height: 22px;
+  width: 250px;
+  border: 0;
+  border-bottom: 3px solid #000;
+  color: #000;
+  font-size: 12px;
+  font-family: "LatoReg", sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+}
+.account-wrapper .signupForm .signup-input:focus {
+  outline: none;
+}
+.account-wrapper .signupForm .login {
+  cursor: pointer;
+  position: absolute;
+  background-color: #ffd972;
+  border: 0;
+  padding: 10px 77.5px;
+  color: #000;
+  margin: 135px 4px;
+  font-family: "CaveatR", sans-serif;
+  font-size: 25px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.account-wrapper .signupForm .login:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+.account-wrapper .signupForm .signup {
+  cursor: pointer;
+  position: absolute;
+  background-color: #ffd972;
+  border: 0;
+  padding: 10px 87px;
+  color: #000;
+  margin: 260px 6px;
+  font-family: "CaveatR", sans-serif;
+  font-size: 25px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.account-wrapper .signupForm .signup:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-top: 43px;
+}
+.loginForm .login-input {
+  height: 22px;
+  width: 206px;
+  border: 0;
+  border-bottom: 3px solid #000;
+  color: #000;
+  font-size: 12px;
+  font-family: "LatoReg", sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+}
+.loginForm .login-input:focus {
+  outline: none;
+}
+.loginForm .signup-input {
+  height: 22px;
+  width: 250px;
+  border: 0;
+  border-bottom: 3px solid #000;
+  color: #000;
+  font-size: 12px;
+  font-family: "LatoReg", sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+}
+.loginForm .signup-input:focus {
+  outline: none;
+}
+.loginForm .login {
+  cursor: pointer;
+  position: absolute;
+  background-color: #ffd972;
+  border: 0;
+  padding: 10px 77.5px;
+  color: #000;
+  margin: 135px 4px;
+  font-family: "CaveatR", sans-serif;
+  font-size: 25px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.loginForm .login:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+.loginForm .signup {
+  cursor: pointer;
+  position: absolute;
+  background-color: #ffd972;
+  border: 0;
+  padding: 10px 87px;
+  color: #000;
+  margin: 260px 6px;
+  font-family: "CaveatR", sans-serif;
+  font-size: 25px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.loginForm .signup:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+
+.login-page {
+  background-color: #ffd972;
+  position: fixed;
+  height: calc(100vh + 120px);
+  width: 100%;
+  top: -120px;
+}
+
+.signed-in-page {
+  height: 81vh;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.signed-in-page h1 {
+  font-size: 54px;
+  font-family: "LatoReg", sans-serif;
+  margin-bottom: 80px;
+  font-weight: 200;
+}
+.signed-in-page a {
+  padding: 14px 80px;
+  border-radius: 40px;
+  background-color: #ffd972;
+  font-family: "CaveatR", sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.signed-in-page a:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+
+@media screen and (max-width: 1280px) {
+  .account-wrapper {
+    height: 79.5vh;
+  }
+  .signed-in-page {
+    height: 79.5vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content {
+    height: 800px;
+  }
+  .signed-in-page h1 {
+    font-size: 38px;
+  }
+  .signed-in-page a {
+    padding: 11px 77px;
+    font-size: 22px;
+  }
+  .account-wrapper {
+    flex-direction: column;
+    row-gap: 250px;
+    margin-top: 100px;
+    margin-bottom: 220px;
+    height: 86vh;
+    top: -46px;
+  }
+  .account-wrapper .login-wrapper h1 {
+    font-size: 30px;
+  }
+  .account-wrapper .login-wrapper p {
+    margin-bottom: 10px;
+  }
+  .account-wrapper .login-wrapper .signup-input {
+    width: 206px;
+  }
+  .account-wrapper .login-wrapper div .signup {
+    padding: 10px 77.5px;
+    margin: 260px -4px;
+  }
+}
+.recipe-hero {
+  background-image: linear-gradient(rgba(167, 232, 189, 0.7), rgba(167, 232, 189, 0.7)), url(../images/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.recipe-content {
+  max-width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  z-index: 2;
+  padding: 96px;
+  min-height: 90vh;
+}
+.recipe-content h3 {
+  font-family: "CaveatB", sans-serif;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+.recipe-content .recipe-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 84%;
+  flex-wrap: wrap;
+  row-gap: 50px;
+}
+.recipe-content .recipe-boxes .edit-delete-buttons {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+.recipe-content .recipe-boxes .edit-delete-buttons a {
+  width: 128px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd972;
+  font-size: 20px;
+  font-family: "CaveatR", sans-serif;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.recipe-content .recipe-boxes .edit-delete-buttons a:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+.recipe-content .recipe-boxes .recipe-box {
+  display: flex;
+  position: relative;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-img a {
+  padding: 9px 45px;
+  position: absolute;
+  top: 44%;
+  left: 16.4%;
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd972;
+  font-size: 20px;
+  font-family: "CaveatR", sans-serif;
+  border-radius: 40px;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-img a:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+.recipe-content .recipe-boxes .recipe-box img {
+  height: 263px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info {
+  width: 224px;
+  height: 263px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 36px 47px;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info h4 {
+  font-family: "LatoBlack", sans-serif;
+  font-size: 15px;
+  text-decoration: 2px underline;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc {
+  font-size: 9px;
+  width: 140px;
+  height: 55px;
+  letter-spacing: 1px;
+  font-family: "LatoReg", sans-serif;
+  margin: 5px 0 20px 0;
+  margin-left: 4px;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc-2 {
+  font-size: 9px;
+  width: 140px;
+  letter-spacing: 0.1px;
+  font-family: "LatoReg", sans-serif;
+  margin: 5px 0 20px 0;
+  margin-left: 4px;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc-3 {
+  font-size: 9px;
+  width: 140px;
+  letter-spacing: 0.5px;
+  font-family: "LatoReg", sans-serif;
+  margin: 5px 0 10px 0;
+  margin-left: 4px;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-time-servings-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: -10px;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-time-servings-box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .time {
+  display: flex;
+  align-items: center;
+  width: 87px;
+  height: 22px;
+  margin: 10px 0 19px 0;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .time img {
+  width: 23px;
+  height: 23px;
+  object-fit: cover;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .time p {
+  font-size: 10px;
+  margin-top: 12px;
+  margin-left: 16px;
+  text-align: center;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .servings {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 87px;
+  height: 22px;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .servings img {
+  width: 23px;
+  height: 23px;
+  object-fit: cover;
+}
+.recipe-content .recipe-boxes .recipe-box .recipe-info .servings p {
+  font-size: 10px;
+  margin-top: 12px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1500px) {
+  .site-wrapper #app .recipe-content .recipe-boxes {
+    max-width: 100%;
+    justify-content: space-between;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recipe-content h3 {
+    margin-left: 30px;
+  }
+  .recipe-content .recipe-boxes .recipe-box {
+    margin: 0 auto;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-img a {
+    left: 210px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .recipe-hero {
+    height: 200vh;
+  }
+  .recipe-content {
+    padding: 30px;
+  }
+  .recipe-content h3 {
+    margin-left: 7px;
+    margin-bottom: 28px;
+    font-size: 22px;
+  }
+  .recipe-content .your-title {
+    margin-left: 28px;
+    margin-bottom: 28px;
+    font-size: 20px;
+  }
+  .recipe-content .recipe-boxes .edit-delete-buttons {
+    width: 300px;
+    justify-content: space-between;
+  }
+  .recipe-content .recipe-boxes .edit-delete-buttons a {
+    height: 37px;
+    width: 141px;
+  }
+  .recipe-content .recipe-boxes .recipe-box {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-img a {
+    padding: 8px 56.5px;
+    top: 18%;
+    left: 80px;
+    font-size: 18px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-img a:hover {
+    background-color: #e1c066;
+    border-bottom: 0px;
+  }
+  .recipe-content .recipe-boxes .recipe-box img {
+    width: 298px;
+    height: 150px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info {
+    width: 298px;
+    height: 170px;
+    padding: 14px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info h4 {
+    font-size: 10px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc {
+    font-size: 8px;
+    width: 153px;
+    height: 44px;
+    overflow-y: hidden;
+    letter-spacing: 0px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc-2 {
+    font-size: 8px;
+    width: 153px;
+    height: 44px;
+    overflow-y: hidden;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-info-desc-3 {
+    font-size: 8px;
+    width: 153px;
+    height: 44px;
+    overflow-y: hidden;
+    margin: 5px 0 20px 0;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .recipe-time-servings-box {
+    margin-top: 0;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .time {
+    margin: 0 0 10px 5px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .time p {
+    font-size: 8px;
+    margin-left: 20px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .time img {
+    height: 21px;
+    width: 21px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .servings p {
+    font-size: 8px;
+  }
+  .recipe-content .recipe-boxes .recipe-box .recipe-info .servings img {
+    height: 21px;
+    width: 21px;
+  }
+}
+.form-container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 150px;
+}
+
+.formHolder {
+  width: 100%;
+  padding-top: 20px;
+}
+.formHolder h1 {
+  font-family: "CaveatB", sans-serif;
+  font-size: 25px;
+  margin: 10px 0 60px 0;
+}
+.formHolder h2 {
+  font-family: "LatoL", sans-serif;
+  font-size: 18px;
+  margin-top: 80px;
+}
+.formHolder .formDesc {
+  margin-top: 50px;
+  width: 100%;
+  position: relative;
+}
+.formHolder .formDesc .ingreBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #efa7a7;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  cursor: pointer;
+}
+.formHolder .formDesc .ingreBtn span {
+  margin-bottom: 3px;
+}
+.formHolder .formInstr {
+  margin-top: 50px;
+  width: 100%;
+  position: relative;
+}
+.formHolder .formInstr .instrBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #efa7a7;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  cursor: pointer;
+}
+.formHolder .formInstr .instrBtn span {
+  margin-bottom: 3px;
+}
+.formHolder input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 44px;
+  border: none;
+  border-bottom: 2px solid #000;
+  background-color: rgba(0, 0, 0, 0);
+  padding-bottom: -5;
+  font-family: "LatoL", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 2px;
+}
+
+.formRecipe {
+  position: relative;
+}
+.formRecipe .imageBtn {
+  width: 110px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  color: #000;
+  font-size: 14px;
+  background-color: #efa7a7;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  cursor: pointer;
+  font-family: "CaveatR", sans-serif;
+  font-size: 17px;
+}
+
+.btn {
+  width: 422px;
+  height: 52px;
+  border-radius: 40px;
+  background-color: #efa7a7;
+  font-family: "CaveatR", sans-serif;
+  color: #000;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 390px) {
+  .form-container {
+    padding: 98px 38px;
+  }
+  .form-container input {
+    font-size: 12px;
+  }
+  .form-container .formRecipe .imageBtn {
+    width: 98px;
+    height: 33px;
+    font-size: 12px;
+  }
+  .btn {
+    width: 283px;
+    height: 52px;
+    font-size: 20px;
+  }
+}
+.view-holder {
+  padding: 134px;
+  display: flex;
+  flex-direction: column;
+}
+.view-holder img {
+  width: 468px;
+  height: 421px;
+  object-fit: cover;
+}
+.view-holder h1 {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -16px;
+  top: 400px;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+.view-holder .view-top {
+  display: flex;
+}
+.view-holder .view-top .view-description {
+  margin-left: 34px;
+}
+.view-holder .view-top .view-description h2 {
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+.view-holder .view-top .view-description p {
+  font-family: "CaveatR", sans-serif;
+  letter-spacing: 5px;
+  font-size: 20px;
+  margin-top: 34px;
+}
+.view-holder .view-top .view-description h3 {
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: 100;
+  margin-top: 36px;
+}
+.view-holder .view-ingredients {
+  margin-bottom: 20px;
+}
+.view-holder .view-ingredients h2 {
+  margin: 40px 0 30px 0;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+.view-holder .view-ingredients ul {
+  list-style-type: none;
+  font-family: "CaveatR", sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.view-holder .view-instructions {
+  margin-bottom: 90px;
+}
+.view-holder .view-instructions h2 {
+  margin: 40px 0 30px 0;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+.view-holder .view-instructions li {
+  margin-left: 24px;
+  font-family: "CaveatR", sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.view-holder a {
+  width: 128px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  background-color: #ffd972;
+  font-size: 20px;
+  font-family: "CaveatR", sans-serif;
+  border-radius: 40px;
+}
+.view-holder a:hover {
+  background-color: #e1c066;
+  border-bottom: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .view-holder .view-top {
+    flex-direction: column;
+  }
+  .view-holder .view-top .top {
+    margin-bottom: 60px;
+  }
+  .view-holder .view-top .view-description {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .view-holder {
+    padding: 36px;
+  }
+  .view-holder img {
+    width: 251px;
+    height: 226px;
+    margin-left: 20px;
+  }
+  .view-holder h1 {
+    font-size: 20px;
+    left: -44px;
+    top: 260px;
+    font-family: "LatoReg", sans-serif;
+  }
+  .view-holder .view-description {
+    margin-bottom: 42px;
+  }
+  .view-holder .view-description h2 {
+    font-size: 20px;
+  }
+  .view-holder .view-description p {
+    font-size: 16px;
+  }
+  .view-holder .view-ingredients h2 {
+    font-size: 20px;
+  }
+  .view-holder .view-ingredients p {
+    font-size: 16px;
+  }
+  .view-holder .view-instructions {
+    margin-bottom: 40px;
+  }
+  .view-holder .view-instructions h2 {
+    font-size: 20px;
+  }
+  .view-holder .view-instructions p {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

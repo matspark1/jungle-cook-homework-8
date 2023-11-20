@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mobile-overflow {
+  overflow: hidden;
+}
+
+html,
+body {
+  font-family: $LatoR;
+  background-color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: "CaveatB";
+  src: url(../css/fonts/Caveat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "CaveatR";
+  src: url(../css/fonts/Caveat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoItal";
+  src: url(../css/fonts/Lato/Lato-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoLightItal";
+  src: url(../css/fonts/Lato/Lato-LightItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoBlack";
+  src: url(../css/fonts/Lato/Lato-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoReg";
+  src: url(../css/fonts/Lato/Lato-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoL";
+  src: url(../css/fonts/Lato/Lato-Light.ttf) format("truetype");
+}

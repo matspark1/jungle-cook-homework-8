@@ -1,0 +1,146 @@
+.view-holder {
+  padding: 134px;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 468px;
+    height: 421px;
+    object-fit: cover;
+  }
+  h1 {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -16px;
+    top: 400px;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+
+  .view-top {
+    display: flex;
+    .view-description {
+      margin-left: 34px;
+      h2 {
+        font-size: 25px;
+        letter-spacing: 5px;
+        font-weight: 100;
+      }
+      p {
+        font-family: $CaveatR;
+        letter-spacing: 5px;
+        font-size: 20px;
+        margin-top: 34px;
+      }
+      h3 {
+        font-size: 20px;
+        letter-spacing: 5px;
+        font-weight: 100;
+        margin-top: 36px;
+      }
+    }
+  }
+  .view-ingredients {
+    margin-bottom: 20px;
+    h2 {
+      margin: 40px 0 30px 0;
+      font-size: 25px;
+      letter-spacing: 5px;
+      font-weight: 100;
+    }
+    ul {
+      list-style-type: none;
+      font-family: $CaveatR;
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+  }
+  .view-instructions {
+    margin-bottom: 90px;
+    h2 {
+      margin: 40px 0 30px 0;
+      font-size: 25px;
+      letter-spacing: 5px;
+      font-weight: 100;
+    }
+    li {
+      margin-left: 24px;
+      font-family: $CaveatR;
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+  }
+  a {
+    width: 128px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    background-color: $yellow;
+    font-size: 20px;
+    font-family: $CaveatR;
+    border-radius: 40px;
+    &:hover {
+      background-color: #e1c066;
+      border-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .view-holder {
+    .view-top {
+      flex-direction: column;
+      .top {
+        margin-bottom: 60px;
+      }
+      .view-description {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .view-holder {
+    padding: 36px;
+    img {
+      width: 251px;
+      height: 226px;
+      margin-left: 20px;
+    }
+    h1 {
+      font-size: 20px;
+      left: -44px;
+      top: 260px;
+      font-family: $LatoR;
+    }
+    .view-description {
+      margin-bottom: 42px;
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .view-ingredients {
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .view-instructions {
+      margin-bottom: 40px;
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
